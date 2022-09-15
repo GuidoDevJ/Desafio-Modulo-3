@@ -1,3 +1,4 @@
+/* *********************** REGLAS GENERALES ******************* */
 *{
     padding: 0;
     margin: 0;
@@ -5,6 +6,12 @@
     scroll-behavior: smooth;
 }
 
+/* ************************** VARIABLES ************************ */
+:root{
+    --font-opens: 'Open Sans', sans-serif;
+    --font-roboto:'Roboto', sans-serif;
+}
+/* ***************** HEADER ********* */
 header{
     background-image: url(./assets/image/puntitos.png);
     width: 100%;
@@ -13,11 +20,17 @@ header{
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    overflow: hidden;
+
 }
 header h1{
+    padding: 42px;
     margin: .5rem;
     font-size: 48px;
     font-weight: 700;
+    font-family: var(--font-opens);
+    margin-top: 80px;
+
 
 }
 
@@ -27,6 +40,14 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.logo{
+    width: 90px;
+    margin-bottom: 15px ;
+    margin-top: 10px ;
+}
+.burger{
+    margin-right: 10px;
 }
 .links{
     display: none;
@@ -39,21 +60,22 @@ nav{
     flex-direction: column;
     justify-content: space-between;
 }
-.hero-image h1{
-    margin-top: 80px;
-}
 
-.logo{
-    width: 90px;
-}
-.burger{
-    margin-right: 10px;
-}
 .img_me{
-    width: 318px;
+    max-width: 375px;
     height: 300px;
     margin: 0 auto;
+    overflow: hidden;
 }
+.img_me img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ***************************** MAIN ************************************* */
+
+/* ************ ABOUT ME **************** */
 .about_me{
     width: 100%;
     background-color: #000;
@@ -64,6 +86,7 @@ nav{
 .about_me h2{
     font-size: 32px;
     font-weight: 700;
+    font-family: var(--font-opens);
     align-self: center;
     text-align: center;
     margin: 30px 0px;
@@ -72,6 +95,8 @@ nav{
     font-size: 16px;
     padding: 0 62px;
     align-self: center;
+    font-family: var(--font-roboto);
+
 }
 .about_me img{
     width: 80px;
@@ -81,6 +106,8 @@ nav{
     align-self: center;
     justify-self: center;
 }
+
+/* ********************* TRABAJOS *************************** */
 .works{
     width: 100%;
     height: auto;
@@ -93,9 +120,19 @@ nav{
     margin-top: 45px;
     font-size: 32px;
     font-weight: 700;
+    font-family: var(--font-opens);
 }
 .works h2, .works article{
     margin-bottom: 25px;
+}
+.works h3{
+    font-size: 24px;
+    font-family: var(--font-roboto);
+    font-weight: 700;
+}
+.works p{
+    font-family: var(--font-roboto);
+    font-size: 16px;
 }
 .works img{
     width: 138px;
@@ -107,20 +144,27 @@ nav{
     height: 310px;
     text-align: center;
 }
+
+/* ******************** FORMULARIO ********************************* */
 .form{
     width: 100%;
     background-color: #000;
     height: auto;
-    /* text-align: center; */
     color: #fff;
 }
 .form h2{
     text-align: center;
     padding: 50px;
+    font-family: var(--font-opens);
+    font-size: 32px;
+    font-weight: 700;
 }
 .form label{
     display: block;
     margin-bottom: 10px;
+    font-family: var(--font-roboto);
+    font-weight: 400;
+    font-size: 13px;
 }
 
 .form form{
@@ -138,19 +182,23 @@ nav{
     margin-bottom: 10px;
 }
 .form button{
-    /* width: 335px; */
     height: 45px;
     background-color: #FFD953;
     color: #000;
     font-weight: 700;
+    font-family: var(--font-roboto);
+
     margin-bottom: 40px;
 }
+
+/* ****************** FOOTER ****************************  */
 footer{
     background-color: #DBDBDB;
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: grid;
     grid-template-rows: 1fr 2fr;
+
 }
 
 footer img{
@@ -161,6 +209,8 @@ footer img{
 footer p{
     font-size: 13px;
     font-weight: 400;
+    font-family: var(--font-roboto);
+
 }
 
 .copy{
@@ -169,6 +219,8 @@ footer p{
 }
 .redes_sociales{
     padding: 0 10px;
+    margin-top: 35px;
+
     display: flex;
     flex-direction: column;
    justify-content: center;
@@ -177,6 +229,8 @@ footer p{
 .redes_sociales i{
     font-size: 16px;
     margin: 15px 5px;
+    font-family: var(--font-roboto);
+
 }
 
 .redes_sociales div{
@@ -185,9 +239,10 @@ footer p{
     align-items: center;
 }
 
+/* **************** MEDIA QUERIES **************************** */
+
 @media (min-width:769px){
     .logo{
-        /* margin-top: 15px; */
         width: 105px;
         padding: 15px;
     }
@@ -220,7 +275,7 @@ footer p{
         align-self: center;
     }
     .img_me{
-        width: 435px;
+        max-width: 435px;
         height: 395px;
         align-self: flex-end;
         justify-content: flex-end;
@@ -235,6 +290,10 @@ footer p{
     }
     .about_me-img{
         grid-area: btn;
+    }
+    .about_me-img img{
+        width: 211px;
+        height: 211px;
     }
     .about_me-text{
         align-self: center;
@@ -265,6 +324,7 @@ footer p{
   }
 
   footer{
+    background-image: url(./assets/image/puntitos\ \(2\).png);
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     align-items: center;
