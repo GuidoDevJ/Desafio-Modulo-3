@@ -1,0 +1,279 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-image: url(./assets/image/puntitos.png);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+header h1{
+    margin: .5rem;
+    font-size: 48px;
+    font-weight: 700;
+
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links{
+    display: none;
+}
+
+.hero-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hero-image h1{
+    margin-top: 80px;
+}
+
+.logo{
+    width: 90px;
+}
+.burger{
+    margin-right: 10px;
+}
+.img_me{
+    width: 318px;
+    height: 300px;
+    margin: 0 auto;
+}
+.about_me{
+    width: 100%;
+    background-color: #000;
+    color: #fff;
+    display: grid;
+    grid-template-rows: 1fr 200px;
+}
+.about_me h2{
+    font-size: 32px;
+    font-weight: 700;
+    align-self: center;
+    text-align: center;
+    margin: 30px 0px;
+}
+.about_me p{
+    font-size: 16px;
+    padding: 0 62px;
+    align-self: center;
+}
+.about_me img{
+    width: 80px;
+    height: 80px;
+}
+.about_me-img{
+    align-self: center;
+    justify-self: center;
+}
+.works{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.works h2{
+    margin-top: 45px;
+    font-size: 32px;
+    font-weight: 700;
+}
+.works h2, .works article{
+    margin-bottom: 25px;
+}
+.works img{
+    width: 138px;
+    height: 129px;
+}
+
+.works article{
+    width: 271px;
+    height: 310px;
+    text-align: center;
+}
+.form{
+    width: 100%;
+    background-color: #000;
+    height: auto;
+    /* text-align: center; */
+    color: #fff;
+}
+.form h2{
+    text-align: center;
+    padding: 50px;
+}
+.form label{
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form form{
+    margin: 0 auto;
+    width: 375px;
+    padding: 0 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form input, .form textarea{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.form button{
+    /* width: 335px; */
+    height: 45px;
+    background-color: #FFD953;
+    color: #000;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+footer{
+    background-color: #DBDBDB;
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+}
+
+footer img{
+    width: 77px;
+    height: 71px;
+}
+
+footer p{
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.copy{
+    padding: 0 12px;
+    margin-top: 15px;
+}
+.redes_sociales{
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+}
+
+.redes_sociales i{
+    font-size: 16px;
+    margin: 15px 5px;
+}
+
+.redes_sociales div{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@media (min-width:769px){
+    .logo{
+        /* margin-top: 15px; */
+        width: 105px;
+        padding: 15px;
+    }
+    .burger{
+        display: none;
+    }
+    .links{
+        display: flex;
+        margin-top: 10px;
+        width: 428px;
+        height: 28px;
+        list-style: none;
+        
+        font-size: 18px;
+        justify-content: space-evenly;
+    }
+    .links > li > a{
+        color: #000;
+        text-decoration: none;
+    }
+    .links > li > a:hover{
+       color:  #FFD953;
+    }
+    .hero-image{
+        flex-direction: row;
+    }
+    .hero-image h1{
+        width: 313px;
+        margin-top: 0;
+        align-self: center;
+    }
+    .img_me{
+        width: 435px;
+        height: 395px;
+        align-self: flex-end;
+        justify-content: flex-end;
+        margin: 0 0;
+        margin-right: 40px;
+    }
+    .about_me{
+        height: 538px;
+        grid-template-columns: 35% 65%;
+        grid-template-rows: 1fr;
+        grid-template-areas: "btn text";
+    }
+    .about_me-img{
+        grid-area: btn;
+    }
+    .about_me-text{
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap:wrap ;
+    }
+    .about_me-text h2{
+        align-self: flex-start;
+        padding-left: 62px;
+    }
+  .articles{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .form{
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 35% 65%;
+  }
+  .form h2{
+    padding: 0;
+    align-self: flex-start;
+    justify-self: end;
+  }
+
+  footer{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+  }
+  .redes_sociales{
+    justify-self: center;
+  }
+  .copy{
+    margin-left: 25px;
+  }
+}
